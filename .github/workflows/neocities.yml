@@ -1,13 +1,10 @@
 name: Deploy to neocities
 
+# only run on changes to main
 on:
   push:
     branches:
-      - main # Change to name of branch you're deploying from
-
-concurrency:
-  group: deploy-to-neocities
-  cancel-in-progress: true
+      - main
 
 jobs:
   deploy:
@@ -15,11 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v3
       with:
-        api_token: ${{ secrets.NEOCITIES_API_KEY }}
+        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: false
-         preview_before_deploy: true # print a deployment plan prior to waiting for files to upload.
-        dist_dir: public # Change to fold your site is in, it's set to the root by default
-       
+        dist_dir: public
