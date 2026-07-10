@@ -1,20 +1,29 @@
-name: Deploy to neocities
-on:
-  push:
-    branches:
-      - main
-concurrency:
-  group: deploy-to-neocities
-  cancel-in-progress: true
+     name: Deploy to neocities
+
+on: [push, pull_request]
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Deploy to Neocities
-      uses: bcomnes/deploy-to-neocities@v3
-      with:
-        api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
-        cleanup: false
-        dist_dir: public
-        preview_before_deploy: true
+      - uses: actions/checkout@v4
+
+      - run: make
+
+      - if: ${{ success() && github.ref == 'refs/heads/main' }}
+        id: deploy
+        continue-on-error: true
+        uses: bcomnes/deploy-to-neocities@v3.0.5
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_KEY }}
+          dist_dir: neocities/v1
+          cleanup: true
+
+      - name: Deploy to Neocities fallback
+        if: ${{ steps.deploy.outcome == 'failure' && github.ref == 'refs/heads/main' }}
+        uses: jonchang/deploy-neocities@master
+        with:
+          key: ${{ secrets.NEOCITIES_API_KEY }}
+          dir: neocities/v1
+          clean: true
