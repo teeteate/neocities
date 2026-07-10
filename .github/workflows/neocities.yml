@@ -17,3 +17,4 @@ jobs:
         api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: false
         dist_dir: ./v1
+        preview_before_deploy: true
