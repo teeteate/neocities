@@ -1,0 +1,71 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        body {
+ font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+       cursor: url('https://cdn.cursors-4u.net/previews/sky-blue-bow-tie-de8070fe-32.webp') 35 41, auto !important; }
+
+       dialog {
+
+        background: rgba(135, 207, 235, 0.365);
+        opacity: 80%;
+       }
+h2 {
+color:navy;
+
+}
+
+li {
+  color: rgb(37,37,37);
+}
+
+</style>
+</head>
+<body>
+<button onclick="document.getElementById('sitecreditsPopup').showModal()">Site credits</button>
+<p style="font-size:1.0px">(Opens in a new tab)</p>
+<dialog id="sitecreditsPopup" class="sitecreditd-dialog">
+  <div class="sitecredits-content">
+    <button class="close-btn" onclick="document.getElementById('sitecreditsPopup').close()">×</button>
+    <div class="sitecredits-header">
+      <span class="icon">👩🏿‍💻</span>
+      <h2>Site Credits</h2>
+    </div>
+    <div class="sitecredits-body">
+      <!-- Update 1 -->
+  <ul>
+<li><strong>Header Design</strong>: <a href="https://canva.com">Canva</a></li>
+<li><strong>Background Image</strong>: <a href="https://magnific.com/free-vector/cloud-background-vector-cute-desktop-wallpaper_18247701.htm#fromView=keyword&page=1&position=1&uuid=349504c5-2de4-4b0c-a593-8d90d80ef0bc&query=Cute+background">Magnific</a></li>
+<li><strong>Fonts</strong>: Google Fonts - <a href="https://fonts.google.com/specimen/DynaPuff">Dynapuff</a> & <a href="https://fonts.google.com/specimen/Inter">Inter</a></li>
+<li><strong>Emoji</strong>: <a href="https://emojipedia.org/house">Emojipedia</a></li>
+<li><strong>Cursor</strong>: <a href="https://cursors-4u.com/cursor/cute-blue-cloud">Cursors-4U</a></li>
+<li><strong>Changelog</strong>: <a href="https://keepachangelog.com/">Keep A Changelog</a></li>
+<li><strong>NowNowNow</strong>: <a href="https://nownownow.com/">Now page</a></li>
+<li><strong>Site Credits</strong>: Modified from <a href="https://www.youtube.com/watch?v=UY3TYPLhSsM">this</a> Youtube video</li>
+</ul>
+        </div>
+     
+
+    <div class="sitecredits-disclaimer">
+      <p>Disclaimer: This site is made for desktop by someone learning HTML and CSS. Mobile users: responsiveness is coming soon.</p>
+    </div>
+  </div>
+</div>
+</dialog>
+
+
+    
+</body>
+</html>

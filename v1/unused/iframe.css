@@ -1,0 +1,22 @@
+
+
+        body {
+ font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  cursor: url('https://cdn.cursors-4u.net/previews/sky-blue-bow-tie-de8070fe-32.webp') 35 41, auto !important;}
+        
+
+        a {
+                 background-color: rgb(73, 185, 230); 
+    color: rgb(37, 37, 37);
+      text-decoration: none;
+    font-family: 'Inter';
+     font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    'wdth' 100;
+
+        }

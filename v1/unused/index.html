@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  overflow: hidden;
+  background-color: magenta;
+}
+
+li {
+
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+}
+ul li {
+  float:inline-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+     
+@font-face {
+  font-family:Barbiedol;
+  src: url(assets/Barbiedol.otf);
+}
+
+header,footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+footer {
+  
+ background: brown;
+ color: orange;
+   width:90%;
+margin: 20px 20px 0px 100px;
+}
+
+
+
+        header {
+       
+height: 120px;
+background-color: aqua;
+border: magenta 5px dotted;
+width: 90%;
+/* margin: 50px 50px 50px 50px; */
+/* text-align: center;  */
+ margin-left: auto; margin-right: auto;
+        } 
+        
+        h1{
+            
+font-family: 'Barbiedol';
+font-size: 4.5rem;
+text-shadow: 3px 2px 2px pink;
+color: #ff0083;
+text-align: center;
+ margin-left: auto; margin-right: auto;
+        }
+        /* h2{
+font-family: 'Barbiedol';
+font-size: 1.0rem;
+
+        } */
+        body {
+           background: background: #ff33d6;
+background: background: #FF0090;
+background: linear-gradient(90deg, rgba(255, 0, 144, 1) 15%, rgba(255, 191, 236, 1) 63%, rgba(255, 105, 180, 1) 80%);
+
+        #container {
+            display: flex;
+
+ 
+
+        }
+
+        .left-sidebar {
+
+background: teal;
+border: yellow 2px solid;
+width:20%;
+height:50vh;
+margin-right: 20px;
+        }
+
+        .right-sidebar {
+
+background: orange;
+border: blue 2px solid;
+width:20%;
+height:50vh;
+margin-left: 20px;
+        }
+
+        .main-blog-window {
+background: pink;
+border: red 3px solid;
+width:60%;
+height:60vh;
+padding:10px;
+}
+
+         
+    </style>
+</head>
+<body>
+<header>
+    <h1>TeeTeaTe</h1>
+    <!-- <h2>Learning & Living</h2> -->
+</header>
+<nav><ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Blog</li>
+    <li>Contact</li>
+</ul></nav>
+<div id="container">
+<div class="left-sidebar">
+<section>Left sidebar</section>
+    </div>
+    <div class="main-blog-window">
+<section>Main window for blog</section>
+    </div>
+    <div class="right-sidebar">
+<section>Right sidebar</section>
+    </div>
+  
+    </div>
+      <footer>
+        Created by blah blah blah | blah blah blah | 2026
+    </footer>
+</body>
+</html>
