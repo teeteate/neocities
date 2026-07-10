@@ -23,10 +23,10 @@ jobs:
     # When the dist_dir is ready, deploy it to neocities
     # Here we deploy the folder named `public`
     - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v3
+      uses: bcomnes/deploy-to-neocities@v3.0.5
       with:
         api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: false
         neocities_supporter: false # set this to true if you have a supporter account and want to bypass unsuported files filter.
         preview_before_deploy: true # print a deployment plan prior to waiting for files to upload.
-        dist_dir: v1
+        dist_dir: public
